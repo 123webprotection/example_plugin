@@ -1,8 +1,6 @@
 import { isBundle } from 'typescript'
-import  {} from './bundle/bundle'
-//console.log(plugin_bundle.getDefaultExport())
-
-
+import  {getDefaultExport} from './bundle/bundle'
+console.log(getDefaultExport())
 
 console.log(require('./bundle/bundle'))
 

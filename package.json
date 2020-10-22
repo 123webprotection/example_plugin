@@ -6,8 +6,9 @@
   "types": "expose.d.ts",
   "scripts": {
     "gen:types": "tsc src/expose.ts --declaration --module commonjs --target es6 --outDir bundle --emitDeclarationOnly --skipLibCheck",
+    "combine:types" : "node make-bundle-types.js",
     "gen:es5": "node make-bundle.js",
-    "bundle": "yarn gen:types || yarn gen:es5",
+    "bundle": "yarn gen:types && yarn combine:types && yarn gen:es5",
     "test": "ts-node outside.ts"
   },
   "keywords": [],

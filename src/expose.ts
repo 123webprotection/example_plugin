@@ -20,3 +20,5 @@ export const plugin2 = plugin1
 //export const asyncfunc = func1
 
 export const ww = (str:string) => {return wrap(str,{width:10})};
+
+export const rapp = wrap;
