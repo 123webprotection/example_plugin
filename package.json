@@ -5,7 +5,9 @@
   "main": "./src/expose.ts",
   "types": "expose.d.ts",
   "scripts": {
-    "bundle" : "node make-bundle.js",
+    "gen:types": "tsc src/expose.ts --declaration --module commonjs --target es6 --outDir bundle --emitDeclarationOnly --skipLibCheck",
+    "gen:es5": "node make-bundle.js",
+    "bundle": "yarn gen:types || yarn gen:es5",
     "test": "ts-node outside.ts"
   },
   "keywords": [],
@@ -22,6 +24,7 @@
     "babelify": "^10.0.0",
     "browserify": "^17.0.0",
     "browserify-shim": "^3.8.14",
+    "dts-bundle": "^0.7.3",
     "ts-node": "^9.0.0",
     "tsify": "^5.0.2",
     "typescript": "^4.0.3"
