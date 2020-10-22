@@ -1,6 +1,6 @@
 import { func1, plugin1 } from './lib';
 import { plugin1_info } from './lib2';
-import * as wrap from 'word-wrap'
+import * as wrap from "../node_modules/word-wrap"
 
 // Everything used in this file will be exposed for other 
 //      to use.
