@@ -1,9 +1,7 @@
 {
   "name": "plugin1",
   "version": "1.0.0",
-  "description": "",
-  "main": "./src/expose.ts",
-  "types": "expose.d.ts",
+  "description": "Example 123webprotection js plugin",
   "scripts": {
     "gen:types": "tsc src/expose.ts --declaration --module commonjs --target es6 --outDir bundle --emitDeclarationOnly --skipLibCheck",
     "combine:types" : "node make-bundle-types.js",
